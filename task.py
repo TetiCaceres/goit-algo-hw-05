@@ -56,8 +56,16 @@ H.insert("apple", 10)
 H.insert("orange", 20)
 H.insert("banana", 30)
 
-print(H.get("apple"))   # Виведе: 10
-print(H.get("orange"))  # Виведе: 20
-print(H.get("banana"))  # Виведе: 30
+print("Delete banana:", H.delete("banana"))  # "Item deleted successfully"
+print("Get banana after delete:", H.get("banana"))  # None
 
-print(H.delete("banana"))
+print("Delete banana again:", H.delete("banana"))  # "Item not found"
+
+print("Delete apple:", H.delete("apple"))  # "Item deleted successfully"
+print("Get apple after delete:", H.get("apple"))  # None
+
+print("Delete orange:", H.delete("orange"))  # "Item deleted successfully"
+print("Get orange after delete:", H.get("orange"))  # None
+
+key_hash = H.hash_function("orange")
+print("Bucket after all deletions:", H.table[key_hash])  # None
