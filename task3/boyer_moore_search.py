@@ -29,11 +29,4 @@ def boyer_moore_search(text, pattern):
 
     return -1
 
-# text = "Being a developer is not easy"
-# pattern = "developer"
 
-# position = boyer_moore_search(text, pattern)
-# if position != -1:
-#     print(f"Substring found at index {position}")
-# else:
-#     print("Substring not found")
